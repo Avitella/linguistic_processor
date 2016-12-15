@@ -1,0 +1,17 @@
+cxx_library(
+    name = "gmock",
+    headers = glob([
+        "**/*.cc",
+    ]),
+    exported_headers = glob([
+        "**/*.h",
+    ]),
+    srcs = glob([
+        "**/*.cc",
+    ], excludes = ["gmock/gmock-all.cc"]),
+    deps = [
+        "//third_party/gtest:gtest",
+    ],
+    header_namespace = "",
+    visibility = ["PUBLIC"],
+)

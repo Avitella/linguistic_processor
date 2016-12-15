@@ -1,0 +1,14 @@
+cxx_library(
+    name = "gsl",
+    exported_headers = [
+        "gsl",
+        "gsl_algorithm",
+        "gsl_assert",
+        "gsl_byte",
+        "gsl_util",
+        "multi_span",
+        "span",
+        "string_span",
+    ],
+    visibility = ["PUBLIC"],
+)

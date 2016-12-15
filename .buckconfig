@@ -1,0 +1,3 @@
+[cxx]
+	gtest_dep = //third_party/gmock:gmock
+	cxxflags = -std=c++0x -O3 -Wall -Werror

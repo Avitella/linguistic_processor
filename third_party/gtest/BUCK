@@ -1,0 +1,14 @@
+cxx_library(
+    name = "gtest",
+    headers = glob([
+        "**/*.cc",
+    ]),
+    exported_headers = glob([
+        "**/*.h",
+    ]),
+    srcs = glob([
+        "**/*.cc",
+    ], excludes = ["gtest/gtest-all.cc", "gtest/gtest_main.cc"]),
+    header_namespace = "",
+    visibility = ["PUBLIC"],
+)
