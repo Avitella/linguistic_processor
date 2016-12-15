@@ -1,0 +1,17 @@
+cxx_library(
+    name = "boost",
+    exported_headers = glob([
+        "boost/*.h",
+        "boost/*.hpp",
+        "boost/**/*.hpp",
+        "boost/**/*.ipp",
+        "boost/**/*.h",
+        "libs/**/src/*.ipp",
+    ]),
+    srcs = glob([
+        "libs/%s/src/*.cpp",
+        "libs/%s/src/*.hpp",
+    ]),
+    header_namespace = "",
+    visibility = ["PUBLIC"],
+)
