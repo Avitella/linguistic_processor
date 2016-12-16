@@ -1,0 +1,28 @@
+cxx_library(
+    name = "morphological_analysis",
+    exported_headers = [
+        "grammeme.h",
+        "word.h",
+        "dict.h",
+    ],
+    srcs = [
+        "grammeme.cpp",
+        "word.cpp",
+        "dict.cpp",
+    ],
+    deps = [
+        "//third_party/boost:boost",
+    ],
+    header_namespace = "linguistic_processor/morphological_analysis",
+    visibility = ["PUBLIC"],
+)
+
+cxx_test(
+    name = "ut",
+    srcs = [
+        "grammeme_ut.cpp",
+    ],
+    deps = [
+        ":morphological_analysis",
+    ],
+)

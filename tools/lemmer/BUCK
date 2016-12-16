@@ -1,0 +1,9 @@
+cxx_binary(
+    name = "lemmer",
+    srcs = [
+        "main.cpp",
+    ],
+    deps = [
+        "//linguistic_processor/morphological_analysis:morphological_analysis",
+    ],
+)
